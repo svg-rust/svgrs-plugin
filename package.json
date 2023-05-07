@@ -68,6 +68,14 @@
     "vite": "^3 || ^4",
     "webpack": "^5"
   },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    },
+    "webpack": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.2",
     "@svgr-rs/core": "^0.0.3"
