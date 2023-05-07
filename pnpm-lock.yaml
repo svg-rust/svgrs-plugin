@@ -10,7 +10,7 @@ importers:
       '@rollup/plugin-commonjs': 24.0.1
       '@rollup/plugin-node-resolve': 15.0.1
       '@rollup/pluginutils': ^5.0.2
-      '@svgr-rs/core': ^0.0.3
+      '@svgr-rs/core': ^0.0.8
       '@types/node': 17.0.22
       cz-emoji: 1.3.1
       esbuild: ^0.17.18
@@ -36,7 +36,7 @@ importers:
       webpack: ^5.80.0
     dependencies:
       '@rollup/pluginutils': 5.0.2_rollup@3.19.1
-      '@svgr-rs/core': 0.0.3
+      '@svgr-rs/core': 0.0.8
     devDependencies:
       '@aiou/eslint-config': 0.10.0_2ruvpbjjavfie6oibe5ebrxc24
       '@changesets/cli': 2.21.1
@@ -3292,8 +3292,8 @@ packages:
       webpack: 5.81.0_webpack-cli@5.0.2
     dev: true
 
-  /@svgr-rs/core-darwin-arm64/0.0.3:
-    resolution: {integrity: sha512-R31KKg831U0CbQipS6kqI5AvAYDpBxnuPR+3pD4KkzsV2c6NswM5RfsszSEbbobcmCvDBCfIv+9K1BTAQ4Og7A==}
+  /@svgr-rs/core-darwin-arm64/0.0.8:
+    resolution: {integrity: sha512-KwYMglCLR+xpJlQfWa1bNoPBvi3kv6P2ZE/HvqGFEwrILK68Z5UD8dZ41Tb7p3JT7uO4D1tMmp5ziHD8Krxgqw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -3301,16 +3301,16 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core-darwin-universal/0.0.3:
-    resolution: {integrity: sha512-YxJewa0Vm1EDH5PoloCx8CR85Dgx5T5kRh0+Gbz+DVdW/QCGDrOVzvD/RSN09ZwFT9EEF2q1vMO+K+KCCbujfw==}
+  /@svgr-rs/core-darwin-universal/0.0.8:
+    resolution: {integrity: sha512-kwNeeKVk0pudpG/fs0DgjQCClW/HqMOW004DSM0hSD82lKJtCX7NLjVIqx56RqIy6RVlx2grh6rKW7cCyts9Xw==}
     engines: {node: '>= 10'}
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@svgr-rs/core-darwin-x64/0.0.3:
-    resolution: {integrity: sha512-2Tl0jtQcfVD952Z0pqfmh4bClKzGQbUJncTv5E2H6d02YuNM5s0QTVM5cZIAb1cpTQgGoydpK1VljBg8CyZNUA==}
+  /@svgr-rs/core-darwin-x64/0.0.8:
+    resolution: {integrity: sha512-WEptKFE0xrvC3XMC3xYKYMXYi8N2lp16oQtyoC19Kb4Nob26Lk+jZOW+b3NbyexJgFTu7cm0x00sEREhYVEm8A==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -3318,8 +3318,8 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core-win32-arm64-msvc/0.0.3:
-    resolution: {integrity: sha512-fKgB9wPaOhd82E4iOqlbG9jHsbAcUzNWncBqtNbHUnKLKh6vPNtn8DJqFv40NaI2HkdfBCYpg/N5pZqg4q3A6w==}
+  /@svgr-rs/core-win32-arm64-msvc/0.0.8:
+    resolution: {integrity: sha512-pKOpengtbbkLDncaoYAxh/HGOig08SZSgcAMtpW7lm+Do2VmcKtjMS3SJISWg8U69katNUUCm6i9xEHYueErew==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -3327,8 +3327,8 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core-win32-x64-msvc/0.0.3:
-    resolution: {integrity: sha512-e8Gvy2vev7ofbldA8kJcBIdkZ7jBou8G+dLIV7mU0y+x+YK39Ye+UOZmpcH0/cD8R4SNnjjr35N8NUTDKojRDA==}
+  /@svgr-rs/core-win32-x64-msvc/0.0.8:
+    resolution: {integrity: sha512-cvSEChajA+UsXcvgVoxQwgawHiIXZzo6TO7Af3WsbdF12In3XmHreUjzvZbj9BoJEG4s5yKyEWtZvVD4CMoxJw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -3336,15 +3336,15 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core/0.0.3:
-    resolution: {integrity: sha512-G9/Z9/gNdpjqTbORF7bukHf5fzky3t/XpGP5cf7lOeECwMfUEk3JcJWZaJu7yM6LukfwV5uvimqOkfRlSu99KA==}
+  /@svgr-rs/core/0.0.8:
+    resolution: {integrity: sha512-9YpE/qPRG+aD9EElTQ8C/OWIwuQS3mPMbzk8lwpLy4wOcSZr/1naEPkMUiHvFZaaCbInA2Y/8fBE7oyIPbpWzA==}
     engines: {node: '>= 10'}
     optionalDependencies:
-      '@svgr-rs/core-darwin-arm64': 0.0.3
-      '@svgr-rs/core-darwin-universal': 0.0.3
-      '@svgr-rs/core-darwin-x64': 0.0.3
-      '@svgr-rs/core-win32-arm64-msvc': 0.0.3
-      '@svgr-rs/core-win32-x64-msvc': 0.0.3
+      '@svgr-rs/core-darwin-arm64': 0.0.8
+      '@svgr-rs/core-darwin-universal': 0.0.8
+      '@svgr-rs/core-darwin-x64': 0.0.8
+      '@svgr-rs/core-win32-arm64-msvc': 0.0.8
+      '@svgr-rs/core-win32-x64-msvc': 0.0.8
     dev: false
 
   /@szmarczak/http-timer/1.1.2:

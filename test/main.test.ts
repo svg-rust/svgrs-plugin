@@ -1,5 +1,6 @@
 import { describe, test } from 'vitest'
 
-describe('patch', () => {
-  test.todo('named export patch')
+describe('e2e', () => {
+  test.todo('vite')
+  test.todo('webpack')
 })
