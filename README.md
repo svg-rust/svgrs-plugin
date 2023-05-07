@@ -7,12 +7,12 @@ Use [svgr-rs](https://github.com/svg-rust/svgr-rs) with vite and webpack.
 ## install
 
 ```console
-pnpm i svgrs-plugin
+pnpm i svgrs-plugin -D
 ```
 
 ## usage
 
-`vite`
+### `vite`
 
 ```ts
 import path from 'node:path'
@@ -33,7 +33,25 @@ export default defineConfig({
 })
 ```
 
-`webpack`
+#### `options`
+
+Check supported options from [svg-rust/svgr-rs](https://github.com/svg-rust/svgr-rs). 
+
+**Extra options for vite:**
+
+`include`
+
+- type `string[]`
+- default `['**/*.svg']`
+
+`exclude`
+
+- type `string[]`
+- default `[]`
+
+### `webpack`
+
+Add the following `module rule` to your `webpack.config`
 
 ```ts
 {
@@ -58,6 +76,8 @@ export default defineConfig({
   ],
 }
 ```
+
+Check supported options from [svg-rust/svgr-rs](https://github.com/svg-rust/svgr-rs). 
 
 ## development
 
