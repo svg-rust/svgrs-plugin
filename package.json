@@ -2,17 +2,18 @@
   "name": "svgrs-plugin",
   "version": "0.0.1",
   "packageManager": "pnpm@7.23.0",
+  "description": "Use svgr-rs with vite and webpack",
   "license": "MIT",
   "engines": {
     "node": ">=14"
   },
-  "homepage": "https://github.com/JiangWeixian/svgrs-plugin#readme",
+  "homepage": "https://github.com/svg-rust/svgrs-plugin#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JiangWeixian/svgrs-plugin.git"
+    "url": "git+https://github.com/svg-rust/svgrs-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/JiangWeixian/svgrs-plugin/issues",
+    "url": "https://github.com/svg-rust/svgrs-plugin/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": {
