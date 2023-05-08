@@ -4,10 +4,8 @@ import { createFilter } from '@rollup/pluginutils'
 import { transform } from '@svgr-rs/core'
 import { transformWithEsbuild } from 'vite'
 
-import { patchNamed } from '../patch'
-
 import type { Config } from '@svgr-rs/core'
-import type { Plugin } from 'vite'
+import type { ESBuildOptions, Plugin } from 'vite'
 
 interface SvgrsOptions extends Config {
   include?: string[]
@@ -29,12 +27,28 @@ export const svgrs = ({
   ...config
 }: SvgrsOptions = {}): Plugin => {
   const filter = createFilter(include, exclude)
+  const esbuildOptions: ESBuildOptions = {}
+  const jsxRuntimeMap: Record<NonNullable<SvgrsOptions['jsxRuntime']>, ESBuildOptions['jsx']> = {
+    automatic: 'automatic',
+    classic: 'transform',
+    'classic-preact': 'transform',
+  }
   return {
-    name: 'vite-plugin-svgrs',
+    name: 'svgrs-plugin/vite',
+    options() {
+      esbuildOptions.jsx = jsxRuntimeMap[jsxRuntime]
+      // https://esbuild.github.io/content-types/#using-jsx-without-react
+      esbuildOptions.jsxFactory = jsxRuntime === 'classic-preact'
+        ? 'h'
+        : undefined
+      esbuildOptions.jsxFragment = jsxRuntime === 'classic-preact'
+        ? 'Fragment'
+        : undefined
+    },
     async transform(code, id) {
       if (filter(cleanUrl(id))) {
         const raw = await fs.readFile(cleanUrl(id), 'utf-8')
-        let svgrsCode = await transform(
+        const svgrsCode = await transform(
           raw,
           { namedExport, exportType, jsxRuntime, icon, ...config },
           {
@@ -46,12 +60,9 @@ export const svgrs = ({
             },
           },
         )
-        // namedExport Config looks like not support yet..
-        if (exportType === 'named') {
-          svgrsCode = patchNamed(svgrsCode, code, { componentName: namedExport })
-        }
         const result = await transformWithEsbuild(svgrsCode, id, {
           loader: 'jsx',
+          ...esbuildOptions,
         })
         return {
           code: result.code,

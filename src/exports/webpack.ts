@@ -8,8 +8,6 @@ import path from 'node:path'
 
 import { transform } from '@svgr-rs/core'
 
-import { patchNamed } from '../patch'
-
 import type { Config, State } from '@svgr-rs/core'
 import type { LoaderContext } from 'webpack'
 
@@ -37,16 +35,11 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
   }
 
   if (!previousExport) {
-    let code = await transform(source, options, state)
-    if (options.exportType === 'named') {
-      code = patchNamed(code, '', { componentName: options.namedExport ?? 'ReactComponent' })
-    }
+    const code = await transform(source, options, state)
     callback(null, code)
   } else {
     const content = await fs.readFile(this.resourcePath, 'utf-8')
-    let code = await transform(content, options, state)
-    // namedExport Config looks like not support yet..
-    code = patchNamed(code, previousExport, { componentName: options.namedExport ?? 'ReactComponent' })
+    const code = await transform(content, options, state)
     callback(null, code)
   }
 }
