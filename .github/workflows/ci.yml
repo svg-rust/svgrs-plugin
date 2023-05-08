@@ -15,14 +15,14 @@ jobs:
         node-version: [14.x, 16.x]
 
     steps:
-      - name: checkout code repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: checkout code repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Install pnpm
         run: npm i pnpm@7.23.0 -g
       - name: Install 
