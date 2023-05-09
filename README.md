@@ -1,13 +1,13 @@
 # svgrs-plugin
 
-[![npm](https://img.shields.io/npm/v/svgrs-plugin)](https://github.com/JiangWeixian/svgrs-plugin) [![GitHub](https://img.shields.io/npm/l/svgrs-plugin)](https://github.com/JiangWeixian/svgrs-plugin)
+[![npm](https://img.shields.io/npm/v/@svgr-rs/svgrs-plugin)](https://github.com/svg-rust/svgrs-plugin) [![GitHub](https://img.shields.io/npm/l/@svgr-rs/svgrs-plugin)](https://github.com/svg-rust/svgrs-plugin)
 
 Use [svgr-rs](https://github.com/svg-rust/svgr-rs) with vite and webpack.
 
 ## install
 
 ```console
-pnpm i svgrs-plugin -D
+pnpm i @svgr-rs/svgrs-plugin -D
 ```
 
 ## usage
@@ -18,7 +18,7 @@ pnpm i svgrs-plugin -D
 import path from 'node:path'
 
 import react from '@vitejs/plugin-react'
-import { svgrs } from 'svgrs-plugin/vite'
+import { svgrs } from '@svgr-rs/svgrs-plugin/vite'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
@@ -67,7 +67,7 @@ Add the following `module rule` to your `webpack.config`
       },
     },
     {
-      loader: 'svgrs-plugin/webpack',
+      loader: '@svgr-rs/svgrs-plugin/webpack',
       options: {
         exportType: 'named',
         namedExport: 'ReactComponent',

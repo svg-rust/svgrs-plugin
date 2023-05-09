@@ -1,4 +1,4 @@
-# svgrs-plugin
+# @svgr-rs/svgrs-plugin
 
 ## 0.0.2
 

@@ -1,7 +1,7 @@
 import path from 'node:path'
 
+import { svgrs } from '@svgr-rs/svgrs-plugin/vite'
 import react from '@vitejs/plugin-react'
-import { svgrs } from 'svgrs-plugin/vite'
 import { defineConfig } from 'vite'
 import { VitePluginDocument } from 'vite-plugin-document'
 import inspect from 'vite-plugin-inspect'

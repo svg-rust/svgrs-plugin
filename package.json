@@ -1,5 +1,5 @@
 {
-  "name": "svgrs-plugin",
+  "name": "@svgr-rs/svgrs-plugin",
   "version": "0.0.2",
   "packageManager": "pnpm@7.23.0",
   "description": "Use svgr-rs with vite and webpack",
