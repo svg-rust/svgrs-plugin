@@ -1,5 +1,11 @@
 # svgrs-plugin
 
+## 0.0.2
+
+### Patch Changes
+
+- 8fc3ccf: upgrade @svgr-rust/core, support named exports without polyfill
+
 ## 0.0.1
 
 ### Patch Changes
