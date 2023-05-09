@@ -70,6 +70,7 @@ importers:
   examples/vite:
     specifiers:
       '@changesets/cli': ^2.24.4
+      '@svgr-rs/svgrs-plugin': workspace:^0.0.2
       '@tailwindcss/typography': 0.5.7
       '@types/react': ^18.0.18
       '@types/react-dom': ^18.0.6
@@ -83,7 +84,6 @@ importers:
       react-dom: 18.2.0
       react-router: 6.3.0
       react-router-dom: 6.3.0
-      svgrs-plugin: workspace:^0.0.1
       tailwindcss: 3.1.8
       typescript: 4.4.4
       vite: ^4.3.2
@@ -100,6 +100,7 @@ importers:
       tailwindcss: 3.1.8_postcss@8.4.16
     devDependencies:
       '@changesets/cli': 2.26.1
+      '@svgr-rs/svgrs-plugin': link:../..
       '@types/react': 18.2.0
       '@types/react-dom': 18.2.1
       '@vitejs/plugin-react': 4.0.0_vite@4.3.2
@@ -107,7 +108,6 @@ importers:
       cz-emoji: 1.3.2-canary.2
       postcss: 8.4.16
       prettier: 2.8.8
-      svgrs-plugin: link:../..
       typescript: 4.4.4
       vite: 4.3.2
       vite-plugin-document: 0.1.2_euez2rrf7yque7dtsvnepaikny
@@ -123,6 +123,7 @@ importers:
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.5
       '@rematch/core': 2.2.0
       '@soda/friendly-errors-webpack-plugin': 1.8.1
+      '@svgr-rs/svgrs-plugin': workspace:^0.0.2
       '@tailwindcss/typography': 0.5.2
       '@teamsupercell/typings-for-css-modules-loader': 2.5.1
       '@types/html-webpack-plugin': 3.2.6
@@ -184,7 +185,6 @@ importers:
       stylus: 0.57.0
       stylus-loader: 6.2.0
       stylus-supremacy: 2.15.0
-      svgrs-plugin: workspace:^0.0.1
       swr: 1.3.0
       tailwindcss: 3.0.24
       terser-webpack-plugin: 5.3.1
@@ -220,6 +220,7 @@ importers:
       '@changesets/cli': 2.22.0
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.5_j5c774coc7n6cqblkkin7fdza4
       '@soda/friendly-errors-webpack-plugin': 1.8.1_webpack@5.81.0
+      '@svgr-rs/svgrs-plugin': link:../..
       '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
       '@teamsupercell/typings-for-css-modules-loader': 2.5.1
       '@types/html-webpack-plugin': 3.2.6
@@ -273,7 +274,6 @@ importers:
       stylus: 0.57.0
       stylus-loader: 6.2.0_ariye7jw2lgpw6mfwb3smeilcq
       stylus-supremacy: 2.15.0
-      svgrs-plugin: link:../..
       tailwindcss: 3.0.24_postcss@8.4.12
       terser-webpack-plugin: 5.3.1_webpack@5.81.0
       ts-import-plugin: 2.0.0_typescript@4.6.3

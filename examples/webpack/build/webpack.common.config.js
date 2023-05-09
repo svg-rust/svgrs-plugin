@@ -50,7 +50,7 @@ const common = {
             },
           },
           {
-            loader: 'svgrs-plugin/webpack',
+            loader: '@svgr-rs/svgrs-plugin/webpack',
             options: {
               exportType: 'named',
               namedExport: 'ReactComponent',
