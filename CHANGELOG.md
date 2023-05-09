@@ -1,5 +1,11 @@
 # @svgr-rs/svgrs-plugin
 
+## 0.1.0
+
+### Minor Changes
+
+- d7210b2: republish as @svgr-rs/svgrs-plugin
+
 ## 0.0.2
 
 ### Patch Changes
