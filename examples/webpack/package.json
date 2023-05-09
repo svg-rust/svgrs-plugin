@@ -106,7 +106,7 @@
     "stylus": "0.57.0",
     "stylus-loader": "6.2.0",
     "stylus-supremacy": "2.15.0",
-    "svgrs-plugin": "workspace:^0.0.1",
+    "svgrs-plugin": "workspace:^0.0.2",
     "tailwindcss": "3.0.24",
     "terser-webpack-plugin": "5.3.1",
     "ts-import-plugin": "2.0.0",
