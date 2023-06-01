@@ -4,7 +4,7 @@ import { createFilter } from '@rollup/pluginutils'
 import { transform } from '@svgr-rs/core'
 import { transformWithEsbuild } from 'vite'
 
-import type { Config } from '@svgr-rs/core'
+import type { Config, State } from '@svgr-rs/core'
 import type { ESBuildOptions, Plugin } from 'vite'
 
 interface SvgrsOptions extends Config {
@@ -48,17 +48,21 @@ export const svgrs = ({
     async transform(code, id) {
       if (filter(cleanUrl(id))) {
         const raw = await fs.readFile(cleanUrl(id), 'utf-8')
+        const state: State = {
+          componentName: namedExport,
+          filePath: id,
+        }
+        if (exportType === 'named') {
+          // NOTE: state.caller will force make svgrs use 'named' export type
+          state.caller = {
+            previousExport: code,
+            name: 'svgrs-plugin/vite',
+          }
+        }
         const svgrsCode = await transform(
           raw,
           { namedExport, exportType, jsxRuntime, icon, ...config },
-          {
-            componentName: namedExport,
-            filePath: id,
-            caller: {
-              previousExport: code,
-              name: 'svgrs-plugin/vite',
-            },
-          },
+          state,
         )
         const result = await transformWithEsbuild(svgrsCode, id, {
           loader: 'jsx',

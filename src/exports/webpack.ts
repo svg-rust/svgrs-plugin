@@ -24,16 +24,17 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
     const exportMatches = source.match(/^module.exports\s*=\s*(.*)/)
     return exportMatches ? `export default ${exportMatches[1]}` : null
   })()
-
   const state: State = {
-    caller: {
-      name: 'svgrs-plugin/webpack',
-      previousExport,
-    },
     componentName: options.namedExport ?? 'ReactComponent',
     filePath: path.normalize(this.resourcePath),
   }
-
+  if (options.exportType === 'named') {
+    // NOTE: state.caller will force make svgrs use 'named' export type
+    state.caller = {
+      previousExport,
+      name: 'svgrs-plugin/vite',
+    }
+  }
   if (!previousExport) {
     const code = await transform(source, options, state)
     callback(null, code)
