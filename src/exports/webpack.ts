@@ -15,7 +15,13 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
   this.cacheable && this.cacheable()
   const callback = this.async()
 
-  const options = this.getOptions()
+  const {
+    namedExport = 'ReactComponent',
+    exportType = 'named',
+    jsxRuntime = 'classic',
+    icon = true,
+    ...config
+  } = this.getOptions()
 
   const previousExport = (() => {
     if (source.startsWith('export ')) {
@@ -25,15 +31,22 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
     return exportMatches ? `export default ${exportMatches[1]}` : null
   })()
   const state: State = {
-    componentName: options.namedExport ?? 'ReactComponent',
+    componentName: namedExport,
     filePath: path.normalize(this.resourcePath),
   }
-  if (options.exportType === 'named') {
+  if (exportType === 'named') {
     // NOTE: state.caller will force make svgrs use 'named' export type
     state.caller = {
       previousExport,
       name: 'svgrs-plugin/vite',
     }
+  }
+  const options: Config = {
+    namedExport,
+    exportType,
+    jsxRuntime,
+    icon,
+    ...config,
   }
   if (!previousExport) {
     const code = await transform(source, options, state)
