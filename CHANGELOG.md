@@ -1,5 +1,11 @@
 # @svgr-rs/svgrs-plugin
 
+## 0.1.1
+
+### Patch Changes
+
+- 6a6f888: state.caller failed default export type
+
 ## 0.1.0
 
 ### Minor Changes
