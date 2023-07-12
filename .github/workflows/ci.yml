@@ -28,6 +28,12 @@ jobs:
       - name: Install 
         run: |
           pnpm install --frozen-lockfile=false
+      - name: Build
+        run: |
+          pnpm build
+      - name: Bundle
+        run: |
+          pnpm bundle
       - name: Test
         run: |
           pnpm test

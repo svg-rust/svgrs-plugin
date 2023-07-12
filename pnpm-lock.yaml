@@ -10,7 +10,7 @@ importers:
       '@rollup/plugin-commonjs': 24.0.1
       '@rollup/plugin-node-resolve': 15.0.1
       '@rollup/pluginutils': ^5.0.2
-      '@svgr-rs/core': ^0.0.9
+      '@svgr-rs/core': ^0.0.12
       '@types/node': 17.0.22
       cz-emoji: 1.3.1
       esbuild: ^0.17.18
@@ -36,7 +36,7 @@ importers:
       webpack: ^5.80.0
     dependencies:
       '@rollup/pluginutils': 5.0.2_rollup@3.19.1
-      '@svgr-rs/core': 0.0.9
+      '@svgr-rs/core': 0.0.12
     devDependencies:
       '@aiou/eslint-config': 0.10.0_2ruvpbjjavfie6oibe5ebrxc24
       '@changesets/cli': 2.21.1
@@ -3148,8 +3148,8 @@ packages:
       webpack: 5.81.0_webpack-cli@5.0.2
     dev: true
 
-  /@svgr-rs/core-darwin-arm64/0.0.9:
-    resolution: {integrity: sha512-y8ukgXGlITPih5DanXCVlA4dSmwLYC3nZORVcBmAv2DqjMAbbTxDDpTZnfjDS8Q5CySCeKfn5Vir854ooEtNzA==}
+  /@svgr-rs/core-darwin-arm64/0.0.12:
+    resolution: {integrity: sha512-p8qijwWnwlQI37WFtgGHNF1an+zCj3wh8wzNfvLhWNOLAELfJlbOge8ghGYvrnoV3KOx85yUFMnHYnqTQlDfIw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -3157,16 +3157,16 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core-darwin-universal/0.0.9:
-    resolution: {integrity: sha512-47gStIjv64UXlkwnwUUR3SQpKY9LitaVoNEvZCElLfcFmxmd143LtpaoFWlvqGWE+rLPf6dI5w0Ap53AF+Mp1A==}
+  /@svgr-rs/core-darwin-universal/0.0.12:
+    resolution: {integrity: sha512-kRTC0qBeGbwvstsHqEx30ly52i5pt9Ika0lIaaPcGgoF0MaY8twaZXOnjuR3st/GccRhl948T+DiW8F4mv0KRQ==}
     engines: {node: '>= 10'}
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@svgr-rs/core-darwin-x64/0.0.9:
-    resolution: {integrity: sha512-UaDagUKgryut18C8sWpBWZdstMieHaQI6qD910xm3QPPXoob6vifgS9TNYcHurUU85K9NAWSrnWoqG3fzUgqUQ==}
+  /@svgr-rs/core-darwin-x64/0.0.12:
+    resolution: {integrity: sha512-S0dn1YCYZwNDYww4+hsk2ueEW7LWlRXZyu43edsYij3H4nf4XaZuxaRRWAYnpuqJU+1nurHhdh4CEFQpDBxV2w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -3174,8 +3174,17 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core-win32-arm64-msvc/0.0.9:
-    resolution: {integrity: sha512-KwvRSU4rgkfkqeQD3/ST5gABvCZTaHKVNl+0N3Or5o44Kgyyzui8x2nIx0fYrEvp80jTygzB4fHqz6mrG3jZKA==}
+  /@svgr-rs/core-linux-x64-gnu/0.0.12:
+    resolution: {integrity: sha512-csCNg8+gq8ytC2xfPTxWVPvkKmCGI/yOCcZBX63G5WinOzBS2dzOcLytivbDoiS2i96uwn1CIdscRelb4oZdug==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@svgr-rs/core-win32-arm64-msvc/0.0.12:
+    resolution: {integrity: sha512-u/ZZgQBGn+gtFBUadxKA76JPn8vkGq+5HQLy3bsfnxSpRdyri/WFg8do86ouAbxy1/XABp8P9xkOkfo+qKWm9Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -3183,8 +3192,8 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core-win32-x64-msvc/0.0.9:
-    resolution: {integrity: sha512-3EB764W/6wlZ+5tpOanO84Yo0cAt0Rvghthswsoa3CMZIKu8Y7X5MGMGd4ny9ObgSLZ723ll+tWxKW71Ppe8Mw==}
+  /@svgr-rs/core-win32-x64-msvc/0.0.12:
+    resolution: {integrity: sha512-jyTdvchJ2UUmh0PpPmAYR4Sr9Ad6J/orWyKHHc9MRAG7vf4QItJRnXHBVRxLOujtQ6dyQYI55hH1FkuFXNYk8A==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -3192,15 +3201,16 @@ packages:
     dev: false
     optional: true
 
-  /@svgr-rs/core/0.0.9:
-    resolution: {integrity: sha512-o16hJ9N2wTfy2+0QeWvm0h3RC2X8n/RMje6gHFRfuB85Wjw9uMShuDVeV4AAIJKD/0HlvRtMVAcLEtB6GAkI+Q==}
+  /@svgr-rs/core/0.0.12:
+    resolution: {integrity: sha512-s2Ov5quRybHUtfnJCra9wG5eBalVqoZ+7qrWswtNG8do/yqm/O1DQX80Py1Hy59ivc1/KbAbwhbt0o/84RDcIQ==}
     engines: {node: '>= 10'}
     optionalDependencies:
-      '@svgr-rs/core-darwin-arm64': 0.0.9
-      '@svgr-rs/core-darwin-universal': 0.0.9
-      '@svgr-rs/core-darwin-x64': 0.0.9
-      '@svgr-rs/core-win32-arm64-msvc': 0.0.9
-      '@svgr-rs/core-win32-x64-msvc': 0.0.9
+      '@svgr-rs/core-darwin-arm64': 0.0.12
+      '@svgr-rs/core-darwin-universal': 0.0.12
+      '@svgr-rs/core-darwin-x64': 0.0.12
+      '@svgr-rs/core-linux-x64-gnu': 0.0.12
+      '@svgr-rs/core-win32-arm64-msvc': 0.0.12
+      '@svgr-rs/core-win32-x64-msvc': 0.0.12
     dev: false
 
   /@szmarczak/http-timer/1.1.2:
