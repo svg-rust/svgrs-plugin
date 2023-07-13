@@ -1,5 +1,11 @@
 # @svgr-rs/svgrs-plugin
 
+## 0.1.2
+
+### Patch Changes
+
+- 61306fe: fix linux binding not found
+
 ## 0.1.1
 
 ### Patch Changes
