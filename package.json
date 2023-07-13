@@ -59,7 +59,10 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
     "play:vite": "pnpm --filter=./examples/vite dev",
-    "play:webpack": "pnpm --filter=./examples/webpack dev"
+    "play:webpack": "pnpm --filter=./examples/webpack dev",
+    "bundle:vite": "pnpm --filter=./examples/vite build",
+    "bundle:webpack": "pnpm --filter=./examples/webpack build",
+    "bundle": "pnpm --filter=./examples/** build"
   },
   "lint-staged": {
     "**/**/*.{js,ts,tsx,vue,json}": ["eslint --fix"]
@@ -78,7 +81,7 @@
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.2",
-    "@svgr-rs/core": "^0.0.9"
+    "@svgr-rs/core": "^0.0.12"
   },
   "devDependencies": {
     "@aiou/eslint-config": "0.10.0",
