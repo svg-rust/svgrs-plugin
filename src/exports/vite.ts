@@ -4,6 +4,8 @@ import { createFilter } from '@rollup/pluginutils'
 import { transform } from '@svgr-rs/core'
 import { transformWithEsbuild } from 'vite'
 
+import { svgo } from '../index'
+
 import type { Config, State } from '@svgr-rs/core'
 import type { ESBuildOptions, Plugin } from 'vite'
 
@@ -47,7 +49,7 @@ export const svgrs = ({
     },
     async transform(code, id) {
       if (filter(cleanUrl(id))) {
-        const raw = await fs.readFile(cleanUrl(id), 'utf-8')
+        let raw = await fs.readFile(cleanUrl(id), 'utf-8')
         const state: State = {
           componentName: namedExport,
           filePath: id,
@@ -59,6 +61,7 @@ export const svgrs = ({
             name: 'svgrs-plugin/vite',
           }
         }
+        raw = await svgo(raw, config, state)
         const svgrsCode = await transform(
           raw,
           { namedExport, exportType, jsxRuntime, icon, ...config },
