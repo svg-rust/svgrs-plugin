@@ -4,6 +4,8 @@ on:
     branches:
       - snapshot
       - 'hotfix/**'
+    paths:
+      - '.changeset/**'
 env:
   CI: true
 jobs:
@@ -45,7 +47,7 @@ jobs:
           pnpm install --frozen-lockfile=false
       - name: create and publish versions
         run: |
-          pnpm changset pre enter beta
+          pnpm changeset pre enter beta
           pnpm ci:snapshot
           pnpm ci:prerelease
         env:
