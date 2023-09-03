@@ -28,7 +28,7 @@ importers:
       rollup-plugin-node-externals: 5.1.2
       ts-node: ^10.7.0
       tslib: 2.4.0
-      ttypescript: 1.5.13
+      ttypescript: 1.5.15
       typescript: 4.4.3
       typescript-transform-paths: 3.3.1
       vite: ^4.3.2
@@ -60,7 +60,7 @@ importers:
       rollup-plugin-node-externals: 5.1.2_rollup@3.19.1
       ts-node: 10.9.1_m64khrxlcwyzcm23z7cdilwtqi
       tslib: 2.4.0
-      ttypescript: 1.5.13_yfl7cqpkld7lzicr772fsmvr3q
+      ttypescript: 1.5.15_yfl7cqpkld7lzicr772fsmvr3q
       typescript: 4.4.3
       typescript-transform-paths: 3.3.1_typescript@4.4.3
       vite: 4.3.2_@types+node@17.0.22
@@ -70,7 +70,7 @@ importers:
   examples/vite:
     specifiers:
       '@changesets/cli': ^2.24.4
-      '@svgr-rs/svgrs-plugin': workspace:^0.0.2
+      '@svgr-rs/svgrs-plugin': workspace:^0.1.2
       '@tailwindcss/typography': 0.5.7
       '@types/react': ^18.0.18
       '@types/react-dom': ^18.0.6
@@ -123,7 +123,7 @@ importers:
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.5
       '@rematch/core': 2.2.0
       '@soda/friendly-errors-webpack-plugin': 1.8.1
-      '@svgr-rs/svgrs-plugin': workspace:^0.0.2
+      '@svgr-rs/svgrs-plugin': workspace:^0.1.2
       '@tailwindcss/typography': 0.5.2
       '@teamsupercell/typings-for-css-modules-loader': 2.5.1
       '@types/html-webpack-plugin': 3.2.6
@@ -15666,8 +15666,8 @@ packages:
       yargs: 17.7.1
     dev: true
 
-  /ttypescript/1.5.13_yfl7cqpkld7lzicr772fsmvr3q:
-    resolution: {integrity: sha512-KT/RBfGGlVJFqEI8cVvI3nMsmYcFvPSZh8bU0qX+pAwbi7/ABmYkzn7l/K8skw0xmYjVCoyaV6WLsBQxdadybQ==}
+  /ttypescript/1.5.15_yfl7cqpkld7lzicr772fsmvr3q:
+    resolution: {integrity: sha512-48ykDNHzFnPMnv4hYX1P8Q84TvCZyL1QlFxeuxsuZ48X2+ameBgPenvmCkHJtoOSxpoWTWi8NcgNrRnVDOmfSg==}
     hasBin: true
     peerDependencies:
       ts-node: '>=8.0.2'
