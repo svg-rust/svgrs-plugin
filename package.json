@@ -81,7 +81,8 @@
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.2",
-    "@svgr-rs/core": "^0.0.12"
+    "@svgr-rs/core": "^0.0.12",
+    "svgo": "^3.0.2"
   },
   "devDependencies": {
     "@aiou/eslint-config": "0.10.0",

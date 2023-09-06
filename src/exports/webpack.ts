@@ -8,9 +8,14 @@ import path from 'node:path'
 
 import { transform } from '@svgr-rs/core'
 
+import { svgo } from '../index'
+
 import type { Config, State } from '@svgr-rs/core'
 import type { LoaderContext } from 'webpack'
 
+/**
+ * NOTE: @svgr-rs/svgo not production ready yet. Use svgo instead.
+ */
 async function svgrsLoader(this: LoaderContext<Config>, source: string) {
   this.cacheable && this.cacheable()
   const callback = this.async()
@@ -38,7 +43,7 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
     // NOTE: state.caller will force make svgrs use 'named' export type
     state.caller = {
       previousExport,
-      name: 'svgrs-plugin/vite',
+      name: 'svgrs-plugin/webpack',
     }
   }
   const options: Config = {
@@ -49,11 +54,13 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
     ...config,
   }
   if (!previousExport) {
-    const code = await transform(source, options, state)
+    let code = await svgo(source, config, state)
+    code = await transform(code, options, state)
     callback(null, code)
   } else {
     const content = await fs.readFile(this.resourcePath, 'utf-8')
-    const code = await transform(content, options, state)
+    let code = await svgo(content, config, state)
+    code = await transform(code, options, state)
     callback(null, code)
   }
 }
