@@ -28,7 +28,7 @@ export const svgo = async (code: string, config: Config, state: State) => {
     svgoInstance = await import('svgo')
   }
   const svgoConfig = getSvgoConfig(config)
-  const result = svgoInstance.optimize(code, { ...svgoConfig, path: state.filePath })
+  const result = await svgoInstance.optimize(code, { ...svgoConfig, path: state.filePath })
 
   // @ts-expect-error -- ignore
   if (result.modernError) {
