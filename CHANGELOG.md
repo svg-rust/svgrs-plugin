@@ -1,5 +1,11 @@
 # @svgr-rs/svgrs-plugin
 
+## 0.2.0
+
+### Minor Changes
+
+- af5513a: support nodejs svgo
+
 ## 0.1.2
 
 ### Patch Changes
