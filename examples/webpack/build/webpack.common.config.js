@@ -51,6 +51,12 @@ const common = {
           },
           {
             loader: '@svgr-rs/svgrs-plugin/webpack',
+            // options: {
+            //   svgo: true,
+            //   svgoConfig: {
+            //     plugins: ['preset-default'],
+            //   },
+            // },
           },
         ],
       },
